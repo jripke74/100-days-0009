@@ -11,12 +11,12 @@ async function connectToDatabase() {
 
 function getDb() {
   if (!database) {
-    throw new Error("You must  connect first!");
+    throw new Error("You must connect first!");
   }
   return database;
 }
 
-module.exports -
+module.exports =
   {
     connectToDatabase: connectToDatabase,
     getDb: getDb,
