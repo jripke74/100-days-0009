@@ -23,6 +23,10 @@ function getLogin(req, res) {
   res.render("customer/auth/login");
 }
 
+function login(req, res) {
+  
+}
+
 module.exports = {
   getSignup: getSignup,
   getLogin: getLogin,
