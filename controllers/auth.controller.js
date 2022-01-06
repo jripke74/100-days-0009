@@ -23,7 +23,7 @@ function getSignup(req, res) {
 
 async function signup(req, res, next) {
   const enteredData = {
-    eamail: req.body.email,
+    email: req.body.email,
     confirmEmail: req.body["confirm-email"],
     password: req.body.password,
     fullname: req.body.fullname,
