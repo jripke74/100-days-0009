@@ -98,7 +98,7 @@ a {
 
 .alert h2 {
   font-size: 1rem;
-  margin: var(--space-2);
+  margin: var(--space-2) 0;
   text-transform: uppercase;
 }
 
