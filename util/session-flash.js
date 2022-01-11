@@ -1,9 +1,9 @@
 function getSessionData(req) {
-  const seessionData = req.session.flashedData;
+  const sessionData = req.session.flashedData;
 
   req.session.flashedData = null;
 
-  return seessionData;
+  return sessionData;
 }
 
 function flashDataToSession(req, data, action) {
