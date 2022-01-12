@@ -80,7 +80,7 @@ class Product {
     this.updateImageData();
   }
 
-  async remove() {
+  remove() {
     const productId = new mongodb.ObjectId(this.id);
     return db.getDb().collection("products").deleteOne({ _id: this.id });
   }
