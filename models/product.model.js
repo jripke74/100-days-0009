@@ -68,9 +68,7 @@ class Product {
 
       await db.getDb().collection("products").updateOne(
         { _id: productId },
-        {
-          $set: productData,
-        }
+        { $set: productData }
       );
     } else {
       await db.getDb().collection("products").insertOne(productData);
