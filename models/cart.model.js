@@ -4,7 +4,7 @@ class Cart {
   }
 
   addItem(product) {
-    const cartIem = {
+    const cartItem = {
       product: product,
       quantity: 1,
       totalPrice: product.price,
