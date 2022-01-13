@@ -1,6 +1,6 @@
 const Cart = require("../models/cart.model");
 
-function initializeCart(reg, res, next) {
+function initializeCart(req, res, next) {
   let cart;
 
   if (!req.session.cart) {
