@@ -20,7 +20,7 @@ class Cart {
       }
     }
 
-    this.items.push(cartIem);
+    this.items.push(cartItem);
   }
 }
 
