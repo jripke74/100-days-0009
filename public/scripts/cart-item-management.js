@@ -35,6 +35,6 @@ async function updateCartItem(event) {
   const responseData = await response.json();
 }
 
-for (const formElement of cartItemUpdateFormElement) {
+for (const formElement of cartItemUpdateFormElements) {
   formElement.addEventListener("submit", updateCartItem);
 }
