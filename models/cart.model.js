@@ -34,7 +34,7 @@ class Cart {
     for (let i = 0; i < this.items.length; i++) {
       const item = this.items[i];
       if (item.product.id === productId && newQuantity > 0) {
-        const cartItem = {...item};
+        const cartItem = { ...item };
         const quantityChange = newQuantity - item.quantity;
         cartItem.quantity = newQuantity;
         cartItem.totalPrice = item.totalPrice * product.price;
