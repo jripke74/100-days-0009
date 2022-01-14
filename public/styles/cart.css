@@ -21,7 +21,7 @@
 
 .cart-product-price {
   font-style: italic;
-  color: var(--color-gray-200);
+  color: var(--color-gray-300);
 }
 
 #cart-total {
