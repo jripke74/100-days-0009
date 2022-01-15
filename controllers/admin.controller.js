@@ -61,8 +61,10 @@ async function updateProduct(req, res, next) {
 
 async function deleteProduct(req, res, next) {
   let product;
+  
   try {
     product = await Product.findById(req.params.id);
+    console.log(product);
     await product.remove();
   } catch (error) {
     return next(error);
