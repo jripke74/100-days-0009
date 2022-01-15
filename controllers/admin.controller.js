@@ -64,7 +64,6 @@ async function deleteProduct(req, res, next) {
   
   try {
     product = await Product.findById(req.params.id);
-    console.log(product);
     await product.remove();
   } catch (error) {
     return next(error);
