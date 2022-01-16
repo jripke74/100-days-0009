@@ -32,7 +32,7 @@ async function updateCartItem(event) {
   }
 
   if (!response.ok) {
-    alert("Something went wrong!");
+    alert("Something went wrong, with update!");
     return;
   }
 
