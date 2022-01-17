@@ -20,7 +20,7 @@ class Order {
     this.id = orderId;
   }
 
-  static transformOrderDocument(orderDocs) {
+  static transformOrderDocument(orderDoc) {
     return new Order(
       orderDoc.productData,
       orderDoc.userData,
@@ -31,7 +31,7 @@ class Order {
   }
 
   static transformOrderDocuments(orderDocs) {
-    return orderDocs.map(this.transformOrderDocumentsDocument);
+    return orderDocs.map(this.transformOrderDocument);
   }
 
   static async findAll() {
@@ -46,7 +46,7 @@ class Order {
   }
 
   static async findAllForUser(userId) {
-    const uid = new mongodb.Object(userId);
+    const uid = new mongodb.ObjectId(userId);
 
     const orders = await db
       .getDb()
