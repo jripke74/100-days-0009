@@ -8,7 +8,7 @@ async function getOrders(req, res, next) {
       orders: orders
     });
   } catch (error) {
-    next();
+    next(error);
   }
 }
 
