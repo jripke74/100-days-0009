@@ -56,7 +56,7 @@ class Product {
       .find({ _id: { $in: productIds } })
       .toArray();
 
-    return products.map(function (kproductDocument) {
+    return products.map(function (productDocument) {
       return new Product(productDocument);
     });
   }
