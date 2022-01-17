@@ -45,6 +45,22 @@ class Product {
     });
   }
 
+  static async findMultiple(ids) {
+    const productIds = ids.map(function (id) {
+      return new mongodb.ObjectId(id);
+    });
+
+    const products = await db
+      .getDb()
+      .collection("products")
+      .find({ _id: { $in: productIds } })
+      .toArray();
+
+    return products.map(function (kproductDocument) {
+      return new Product(productDocument);
+    });
+  }
+
   updateImageData() {
     this.imagePath = `product-data/images/${this.image}`;
     this.imageUrl = `/products/assets/images/${this.image}`;
@@ -66,10 +82,10 @@ class Product {
         delete productData.image;
       }
 
-      await db.getDb().collection("products").updateOne(
-        { _id: productId },
-        { $set: productData }
-      );
+      await db
+        .getDb()
+        .collection("products")
+        .updateOne({ _id: productId }, { $set: productData });
     } else {
       await db.getDb().collection("products").insertOne(productData);
     }
